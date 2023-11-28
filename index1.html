@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>03</title>
     <style>
-        p{text-decoration:}
+        p {
+            text-decoration:
+        }
     </style>
 </head>
 
@@ -16,81 +18,91 @@
     <h2>Agustina Perticarini</h2>
 
     <h3>1.1- ¿Qué significa CSS?</h3>
-    <p>Como HTML, CSS (Cascading Style Sheets) u Hojas de estilo en cascada en español, no es realmente un lenguaje de
-        programación, tampoco es un lenguaje de marcado. Es un lenguaje de hojas de estilo, es decir, te permite aplicar
-        estilos de manera selectiva a elementos en documentos HTML.</p>
+    <p>CSS (Cascading Style Sheets) no es realmente un lenguaje de programación, tampoco es un lenguaje de marcado. Es
+        un lenguaje de hojas de estilo, es decir, te permite aplicar estilos de manera selectiva a elementos en
+        documentos HTML.</p>
 
     <h3>1.2- ¿Para qué sirve el CSS? ¿Qué programa se utiliza para interpretar el CSS? </h3>
     <p>El CSS se puede usar para estilos de texto muy básicos como, por ejemplo, cambiar el color y el tamaño de los
-        encabezados y los enlaces. Se puede utilizar para crear un diseño, como podría ser convertir una columna de
-        texto en una composición (en-US) con un área de contenido principal y una barra lateral para información
-        relacionada. Incluso se puede usar para crear efectos de animación.</p>
+        encabezados y los enlaces, hasta incluso se puede usar para crear efectos de animación. No es necesario ningun
+        programa para interpretar CSS, con un bloc de notas o algun editor de texto es suficiente.</p>
 
     <h3>1.3- ¿A qué se llama regla de CSS?</h3>
     <p>El CSS es un lenguaje basado en reglas: cada usuario define las reglas que especifican los grupos de estilos que
-        van a aplicarse a elementos particulares o grupos de elementos de la página web. Por ejemplo: «Quiero que el
-        encabezado principal de mi página se muestre en letras grandes de color rojo».</p>
+        van a aplicarse a elementos particulares o grupos de elementos de la página web.</p>
 
     <h3>1.4- ¿Cuál es la anatomía de la regla de CSS? Agregar imagen explicativa y utilizando una lista descriptiva
         explicar sus elementos.</h3>
-        <p><img src="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png" ></p>
-    <p>La estructura completa es llamada regla predeterminada (pero a menudo «regla» para abreviar). Nota también los nombres de las partes individuales:
+    <p>
+        <img
+            src="https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png">
+    </p>
+    <dl>
+        <dt>selector</dt>
+        <dd>Se selecciona un elemento HTML para diseñarlo</dd>
+        <dt>llaves</dt>
+        <dd>Entre estas habrá una o más declaraciones</dd>
+        <dt>propiedades</dt>
+        <dd>Estas le dan un estilo al elemento, un color, tamaño, fondo, etc.</dd>
+    </dl>
 
-        Selector
-        
-            El elemento HTML en el que comienza la regla. Esta selecciona el(los) elemento(s) a dar estilo (en este caso, los elementos <p> ). Para dar estilo a un elemento diferente, solo cambia el selector.
-        Declaración
-        
-            Una sola regla como color: red; especifica a cuál de las propiedades del elemento quieres dar estilo.
-        Propiedades
-        
-            Maneras en las cuales puedes dar estilo a un elemento HTML. (En este caso, color es una propiedad del elemento <p> ). En CSS, seleccionas qué propiedad quieres afectar en tu regla.
-        Valor de la propiedad
-        
-            A la derecha de la propiedad, después de los dos puntos (:), tienes el valor de la propiedad, para elegir una de las muchas posibles apariencias para una propiedad determinada (hay muchos valores para color además de red).
-        </p>
 
-        <h3>1.5- ¿Qué es un selector en CSS? </h3>
-        <p>Selectores de CSS
+    <h3>1.5- ¿Qué es un selector en CSS? </h3>
+    <p>Selectores de CSS
 
-            El CSS tendrá diferentes tipos de selectores, un selector nos permitirá aplicar estilos a elementos específicos de HTML. De esta forma es posible ser preciso al momento de aplicar diseño a un sitio web.
+        El CSS tendrá diferentes tipos de selectores, un selector nos permitirá aplicar estilos a elementos específicos
+        de HTML. De esta forma es posible ser preciso al momento de aplicar diseño a un sitio web.
         Selector universal, selector por etiquetas, selector descendente, selenctor de clases, selector de ID</p>
 
 
-        <h3>1.6- Identificar y definir los selectores: de ID, de clases, universal, de etiquetas, descendente.</h3>
-        <p>Selector universal, selector por etiquetas, selector descendente, selenctor de clases, selector de ID</p>
+    <h3>1.6- Identificar y definir los selectores: de ID, de clases, universal, de etiquetas, descendente.</h3>
+    <p>
+        Selector universal:El selector universal CSS (*) coincide con elementos de cualquier tipo.<br>
+        Selector por etiquetas:El selector de tipo CSS selecciona todos los elementos del tipo dado dentro de un
+        documento. <br>
+        Selector descendente:El ␣ combinador (que se supone que representan un espacio, o mejor dicho uno o más espacios
+        en blanco) combina dos selectores tales que el selector combinado incluye sólo los elementos que coinciden con
+        el segundo selector para los que hay un elemento ancestro que coincide con el primer selector. <br>
+        Selector de clases:Los selectores de clase buscan un elemento basado en el contenido de su atributo class <br>
+        Selector de ID:Los selectores de ID de CSS buscan un elemento basado en el contenido del atributo ID. <br>
+    </p>
 
-        <h3>1.7- Explicar brevemente utilizando una lista ordenada: ¿cómo funciona el CSS? </h3>
-<p></p>
+    <h3>1.7- Explicar brevemente utilizando una lista ordenada: ¿cómo funciona el CSS? </h3>
+    <ol>
+        <li>El navegador carga el HTML</li>
+        <li>Convierte el HTML en un documento</li>
+        <li>El anevegador va a buscar la mayor parte de los recursos vinculados al documento HTML.</li>
+        <li>El navegador analiza el CSS y ordena en diferentes «cubos» las diferentes reglas según el tipo de selector.</li>
+        <li>El arbol de renderizacion organiza a los nodos como deben aparecer tras aplicarle las reglas.</li>
+        <li>SE muestra el aspecto visual de la pagina.</li>
+    </ol>
 
-<h3>1.8- ¿Cuáles son las tres formas para vincular CSS con HTML?</h3>
-<p>Se puede vincular CSS con HTML mediante un atributo style, una etiqueta style o utilizando un archivo externo. </p>
+    <h3>1.8- ¿Cuáles son las tres formas para vincular CSS con HTML?</h3>
+    <p>Se puede vincular CSS con HTML mediante un atributo style, una etiqueta style o utilizando un archivo externo. </p>
 
-<h3>1.9- Ingrese al sitio CSS Zen Garden http://www.csszengarden.com y analicemos el código HTML siguiendo los siguientes pasos:</h3>
-<p>Primer diseño: <a href="view-source:http://www.csszengarden.com/219/"></a></p>
-<p>Segundo diseño: <a href="view-source:http://www.csszengarden.com/212/"></a></p>
+    <h3>1.9- Ingrese al sitio CSS Zen Garden http://www.csszengarden.com y analicemos el código HTML siguiendo los
+        siguientes pasos:</h3>
+    <p>Primer diseño: <a href="view-source:http://www.csszengarden.com/219/"></a></p>
+    <p>Segundo diseño: <a href="view-source:http://www.csszengarden.com/212/"></a></p>
 
-<h3>¿Son iguales?</h3>
-<p></p>
+    <h3>¿Son iguales?</h3>
+    <p>Los HTML son iguales pero el CSS no entonces visualmente no se ven igual.</p>
 
-<h3>Valores posibles:</h3>
-<p>color:El valor de color puede variar con los colores RGB</p>
-<p>background-color:El valor de color puede variar con los colores RGB</p>
-<p>font-size: xx-small, x-small, small, medium, large, x-large, xx-large</p>
-<p>font-weight:normal, bold, lighter, bolder, 100, 200, 300, 400, 500, 600, 700, 800, 900</p>
-<p>font-style:normal, italic, oblique</p>
-<p>font-family:nombre de familia o generico</p>
-<p>text-align:start, end, left, right, center, justify, match_parent</p>
-<p>text-decoration:puede usar los valores de cada una de las propiedades de la forma larga: text-decoration-line, text-decoration-color, y text-decoration-style</p>
-<p>text-transform:capitalize, uppercase, lowercase, none, full-width</p>
-<p>letter-spacing: length:un largo a utilizar para el espaciado horizontal y vertical,length length: el primero da el espaciado horizontal (espacio entre celdas de una fila) y el segundo el espaciado vertical (espacio entre celdas de una columna).</p>
-<p>line-height:normal, numero, longitud, porcentaje</p>
-
-
-
-
-
-
+    <h3>Valores posibles:</h3>
+    <p>color:El valor de color puede variar con los colores RGB</p>
+    <p>background-color:El valor de color puede variar con los colores RGB</p>
+    <p>font-size: xx-small, x-small, small, medium, large, x-large, xx-large</p>
+    <p>font-weight:normal, bold, lighter, bolder, 100, 200, 300, 400, 500, 600, 700, 800, 900</p>
+    <p>font-style:normal, italic, oblique</p>
+    <p>font-family:nombre de familia o generico</p>
+    <p>text-align:start, end, left, right, center, justify, match_parent</p>
+    <p>text-decoration:puede usar los valores de cada una de las propiedades de la forma larga: text-decoration-line,
+        text-decoration-color, y text-decoration-style</p>
+    <p>text-transform:capitalize, uppercase, lowercase, none, full-width</p>
+    <p>letter-spacing: length:un largo a utilizar para el espaciado horizontal y vertical,length length: el primero da
+        el espaciado horizontal (espacio entre celdas de una fila) y el segundo el espaciado vertical (espacio entre
+        celdas de una columna).</p>
+    <p>line-height:normal, numero, longitud, porcentaje</p>
 
 </body>
 
